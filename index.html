@@ -21,6 +21,48 @@
       color: #002b45;
     }
 
+    a[data-tooltip] {
+      position: relative;
+      cursor: pointer;
+    }
+    
+    a[data-tooltip]::after {
+      content: attr(data-tooltip);
+      position: absolute;
+      bottom: 125%; /* place above the link */
+      left: 50%;
+      transform: translateX(-50%);
+      background-color: #002b45;
+      color: #fff;
+      padding: 0.4rem 0.6rem;
+      font-size: 0.75rem;
+      border-radius: 6px;
+      white-space: nowrap;
+      opacity: 0;
+      pointer-events: none;
+      transition: opacity 0.3s ease, transform 0.3s ease;
+      z-index: 10;
+    }
+    
+    a[data-tooltip]::before {
+      content: '';
+      position: absolute;
+      bottom: 115%;
+      left: 50%;
+      transform: translateX(-50%);
+      border: 6px solid transparent;
+      border-top-color: #002b45;
+      opacity: 0;
+      transition: opacity 0.3s ease;
+      z-index: 10;
+    }
+    
+    a[data-tooltip]:hover::after,
+    a[data-tooltip]:hover::before {
+      opacity: 1;
+    }
+
+
     header {
       font-family: 'Cormorant Garamond', serif;
       color: #002b45;
