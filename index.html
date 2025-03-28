@@ -50,6 +50,8 @@
       background-color: #f0f8ff;
       border-left: 3px solid #005a9c;
       border-radius: 4px;
+      padding: 0 1rem;      /* Horizontal padding only */
+      margin: 0;  
     }
 
     header {
@@ -254,30 +256,32 @@
 
   <footer>OREM YSA 10TH WARD</footer>
   <script>
-    const toggles = document.querySelectorAll('.link-toggle');
-  
-    toggles.forEach(toggle => {
-      toggle.addEventListener('click', function (e) {
-        e.preventDefault(); // prevent link from navigating
-  
-        // Close all descriptions
-        document.querySelectorAll('.link-description').forEach(desc => {
-          desc.style.maxHeight = null;
-          desc.style.opacity = 0;
-        });
-  
-        // Toggle current description
-        const desc = this.nextElementSibling;
-        if (desc.style.maxHeight) {
-          desc.style.maxHeight = null;
-          desc.style.opacity = 0;
-        } else {
-          desc.style.maxHeight = desc.scrollHeight + "px";
-          desc.style.opacity = 1;
-        }
+  const toggles = document.querySelectorAll('.link-toggle');
+
+  toggles.forEach(toggle => {
+    toggle.addEventListener('click', function (e) {
+      e.preventDefault(); // Prevent navigation
+
+      const desc = this.nextElementSibling;
+
+      // Check if this one is already open
+      const isOpen = desc.style.maxHeight && desc.style.maxHeight !== "0px";
+
+      // Close all descriptions
+      document.querySelectorAll('.link-description').forEach(d => {
+        d.style.maxHeight = null;
+        d.style.opacity = 0;
       });
+
+      // If it wasn't open before, open it now
+      if (!isOpen) {
+        desc.style.maxHeight = desc.scrollHeight + "px";
+        desc.style.opacity = 1;
+      }
     });
-  </script>
+  });
+</script>
+
 
 </body>
 </html>
