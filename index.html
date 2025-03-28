@@ -40,18 +40,18 @@
       font-weight: 600;
       letter-spacing: 0.2em;
       text-transform: uppercase;
-      margin: 0.5rem 0 0.5rem;
-      position: relative;
-      display: inline-block;
+      margin: 0.5rem 0;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      gap: 1rem; /* space between text and line */
     }
     
     header h1::after {
       content: "";
-      display: block;
+      flex: 1;
       height: 2px;
       background-color: #002b45;
-      width: 80%;
-      margin: 0.5rem auto 0;
     }
 
 
