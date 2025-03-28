@@ -21,47 +21,30 @@
       color: #002b45;
     }
 
-    a[data-tooltip] {
-      position: relative;
-      cursor: pointer;
-    }
-    
-    a[data-tooltip]::after {
-      content: attr(data-tooltip);
-      position: absolute;
-      bottom: 125%; /* place above the link */
-      left: 50%;
-      transform: translateX(-50%);
-      background-color: #002b45;
-      color: #fff;
-      padding: 0.4rem 0.6rem;
-      font-size: 0.75rem;
-      border-radius: 6px;
-      white-space: nowrap;
-      opacity: 0;
-      pointer-events: none;
-      transition: opacity 0.3s ease, transform 0.3s ease;
-      z-index: 10;
-    }
-    
-    a[data-tooltip]::before {
-      content: '';
-      position: absolute;
-      bottom: 115%;
-      left: 50%;
-      transform: translateX(-50%);
-      border: 6px solid transparent;
-      border-top-color: #002b45;
-      opacity: 0;
-      transition: opacity 0.3s ease;
-      z-index: 10;
-    }
-    
-    a[data-tooltip]:hover::after,
-    a[data-tooltip]:hover::before {
-      opacity: 1;
-    }
-
+      .link-item {
+        position: relative;
+        margin-bottom: 1rem;
+      }
+      
+      .link-description {
+        max-height: 0;
+        overflow: hidden;
+        opacity: 0;
+        transition: max-height 0.4s ease, opacity 0.4s ease;
+        font-size: 0.85rem;
+        padding-left: 1.2rem; /* align with link text */
+        color: #003355;
+        background-color: #f0f8ff;
+        border-left: 3px solid #005a9c;
+        padding: 0.5rem 1rem;
+        border-radius: 4px;
+}
+      }
+      
+      .link-item:hover .link-description {
+        max-height: 100px; /* big enough to show a few lines */
+        opacity: 1;
+      }
 
     header {
       font-family: 'Cormorant Garamond', serif;
@@ -227,11 +210,15 @@
       <h2>Prepare <i class="fas fa-tools"></i></h2>
       <hr>
       <a href="#" target="_blank">HOW TO: Job Interviews <i class="fas fa-arrow-right"></i></a>
+      
       <a href="#" target="_blank">HOW TO: Create a Resume <i class="fas fa-arrow-right"></i></a>
       <a href="#" target="_blank">HOW TO: Networking <i class="fas fa-arrow-right"></i></a>
       <a href="#" target="_blank">Find an Employment Center <i class="fas fa-arrow-right"></i></a>
       <a href="#" target="_blank">Prepare for Interviews Workshop <i class="fas fa-arrow-right"></i></a>
-      <a href="#" target="_blank">Resume Workshop <i class="fas fa-arrow-right"></i></a>
+      <div class="link-item">
+        <a href="#" target="_blank">Resume Workshop <i class="fas fa-arrow-right"></i></a>
+        <div class="link-description">Join a workshop to polish your resume. hahahaha</div>
+      </div>
     </div>
 
     <div class="column seek">
