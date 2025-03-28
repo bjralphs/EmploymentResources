@@ -221,8 +221,86 @@
     .manage {
       background-color: #dbe5ea;
     }
+
+    #chat-launcher {
+  position: fixed;
+  bottom: 20px;
+  right: 20px;
+  background-color: #005a9c;
+  color: white;
+  border-radius: 50%;
+  width: 50px;
+  height: 50px;
+  font-size: 1.5rem;
+  text-align: center;
+  line-height: 50px;
+  cursor: pointer;
+  z-index: 999;
+  box-shadow: 0 4px 8px rgba(0,0,0,0.2);
+  transition: background-color 0.3s;
+}
+
+#chat-launcher:hover {
+  background-color: #003f6d;
+}
+
+#chat-box {
+  position: fixed;
+  bottom: 80px;
+  right: 20px;
+  width: 280px;
+  padding: 1rem;
+  background-color: #f0f8ff;
+  border: 1px solid #005a9c;
+  border-radius: 10px;
+  box-shadow: 0 4px 8px rgba(0,0,0,0.15);
+  opacity: 0;
+  transform: translateY(20px);
+  pointer-events: none;
+  transition: all 0.3s ease;
+  z-index: 998;
+}
+
+#chat-box.open {
+  opacity: 1;
+  transform: translateY(0);
+  pointer-events: auto;
+}
+
+#chat-box p {
+  margin: 0;
+  font-size: 0.95rem;
+  color: #002b45;
+}
+
+#chat-box a {
+  color: #005a9c;
+  font-weight: bold;
+  text-decoration: underline;
+}
+
+/* Close button styling */
+#chat-close {
+  position: absolute;
+  top: 6px;
+  right: 8px;
+  background: none;
+  border: none;
+  font-size: 1.2rem;
+  color: #005a9c;
+  cursor: pointer;
+}
+
   </style>
 </head>
+  <div id="chat-box">
+  <button id="chat-close" aria-label="Close chat">×</button>
+  <p>
+    Need to chat?<br>
+    Schedule a conversation with the Ward's Employment Specialist<br>
+    👉 <a href="YOUR_GOOGLE_CALENDAR_URL" target="_blank">HERE</a>
+  </p>
+</div>
 <body>
   <header>
   <div class="header-inner">
@@ -354,6 +432,27 @@
     });
 
 </script>
+  <script>
+  const chatLauncher = document.getElementById('chat-launcher');
+  const chatBox = document.getElementById('chat-box');
+  const chatClose = document.getElementById('chat-close');
+
+  chatLauncher.addEventListener('click', () => {
+    chatBox.classList.toggle('open');
+  });
+
+  chatClose.addEventListener('click', () => {
+    chatBox.classList.remove('open');
+  });
+
+  // Optional: Close when clicking outside
+  document.addEventListener('click', function (event) {
+    if (!chatBox.contains(event.target) && !chatLauncher.contains(event.target)) {
+      chatBox.classList.remove('open');
+    }
+  });
+</script>
+
 
 
 </body>
