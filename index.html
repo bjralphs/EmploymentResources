@@ -32,10 +32,10 @@
     }
 
     .link-toggle .icon {
-    flex-shrink: 0; /* prevents arrow from shrinking */
-    display: flex;
-    align-items: center;
-    margin-left: 1rem; /* optional: space between text and arrow */
+      flex-shrink: 0; /* prevents arrow from shrinking */
+      display: flex;
+      align-items: center;
+      margin-left: 1rem; /* optional: space between text and arrow */
     }
 
 
@@ -68,9 +68,7 @@
       border-radius: 5px;
       transition: background-color 0.3s;
       cursor: pointer;
-    }
-
-    
+    }    
     
     .link-toggle:hover {
       background-color: #d0e7fb;
@@ -229,66 +227,66 @@
     }
 
    #chat-launcher {
-  position: fixed;
-  bottom: 20px;
-  right: 20px;
-  background-color: #005a9c;
-  color: white;
-  border-radius: 50%;
-  width: 50px;
-  height: 50px;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  cursor: pointer;
-  z-index: 999;
-  box-shadow: 0 4px 8px rgba(0,0,0,0.2);
-  transition: background-color 0.3s;
-}
+      position: fixed;
+      bottom: 20px;
+      right: 20px;
+      background-color: #005a9c;
+      color: white;
+      border-radius: 50%;
+      width: 50px;
+      height: 50px;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      cursor: pointer;
+      z-index: 999;
+      box-shadow: 0 4px 8px rgba(0,0,0,0.2);
+      transition: background-color 0.3s;
+    }
 
-#chat-launcher:hover {
-  background-color: #003f6d;
-}
+    #chat-launcher:hover {
+      background-color: #003f6d;
+    }
 
-#chat-box {
-  position: fixed;
-  bottom: 80px;
-  right: 20px;
-  width: 280px;
-  padding: 1rem;
-  background-color: #f0f8ff;
-  border: 1px solid #005a9c;
-  border-radius: 10px;
-  box-shadow: 0 4px 8px rgba(0,0,0,0.15);
-  opacity: 0;
-  transform: translateY(20px);
-  pointer-events: none;
-  transition: all 0.3s ease;
-  z-index: 998;
-}
+    #chat-box {
+      position: fixed;
+      bottom: 80px;
+      right: 20px;
+      width: 280px;
+      padding: 1rem;
+      background-color: #f0f8ff;
+      border: 1px solid #005a9c;
+      border-radius: 10px;
+      box-shadow: 0 4px 8px rgba(0,0,0,0.15);
+      opacity: 0;
+      transform: translateY(20px);
+      pointer-events: none;
+      transition: all 0.3s ease;
+      z-index: 998;
+    }
 
-#chat-box.open {
-  opacity: 1;
-  transform: translateY(0);
-  pointer-events: auto;
-}
+    #chat-box.open {
+      opacity: 1;
+      transform: translateY(0);
+      pointer-events: auto;
+    }
 
-@media (max-width: 600px) {
-  #chat-launcher {
-    width: 40px;
-    height: 40px;
-    font-size: 1rem;
-    bottom: 15px;
-    right: 15px;
-  }
-
-  #chat-box {
-    width: 90%;
-    right: 5%;
-    bottom: 70px;
-    font-size: 0.9rem;
-  }
-}
+    @media (max-width: 600px) {
+      #chat-launcher {
+        width: 40px;
+        height: 40px;
+        font-size: 1rem;
+        bottom: 15px;
+        right: 15px;
+      }
+    
+      #chat-box {
+        width: 90%;
+        right: 5%;
+        bottom: 70px;
+        font-size: 0.9rem;
+      }
+    }
 
 
   </style>
@@ -306,20 +304,22 @@
   <div class="slide" style="width: 75%;">
     <h2>GENERAL</h2>
     <hr>
+    
     <div class="general-links">
-      <a href="#" target="_blank"><strong>Sign Up for One-on-One Job Coaching </strong><span class="icon"><svg width="16" height="16" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
-        <path d="M9 18L15 12L9 6" stroke="#005a9c" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
-        </svg>
-      </span><i class="fas fa-arrow-right"></i></a>
-      <a href="#" target="_blank"><strong>Ask an Expert </strong><span class="icon"><svg width="16" height="16" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
-        <path d="M9 18L15 12L9 6" stroke="#005a9c" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
-        </svg>
-      </span><i class="fas fa-arrow-right"></i></a>
-      <a href="#" target="_blank"><strong>Employment Webinar Series </strong><span class="icon"><svg width="16" height="16" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
-        <path d="M9 18L15 12L9 6" stroke="#005a9c" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
-        </svg>
-      </span><i class="fas fa-arrow-right"></i></a>
+      <a href="https://employmentservices.churchofjesuschrist.org/jobSeekers" target="_blank"><strong>Sign Up for One-on-One Job Coaching </strong><span class="icon"><svg width="16" height="16" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+        <path d="M9 18L15 12L9 6" stroke="#005a9c" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg></span><i class="fas fa-arrow-right"></i>
+      </a>
+      
+      <a href="https://www.churchofjesuschrist.org/life/ask-an-expert-forum?lang=eng" target="_blank"><strong>Ask an Expert </strong><span class="icon"><svg width="16" height="16" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+        <path d="M9 18L15 12L9 6" stroke="#005a9c" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg></span><i class="fas fa-arrow-right"></i>
+      </a>
+      
+      <a href="https://www.churchofjesuschrist.org/life/webinars-and-workshops?lang=eng" target="_blank"><strong>Employment Webinar Series </strong><span class="icon"><svg width="16" height="16" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+        <path d="M9 18L15 12L9 6" stroke="#005a9c" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg></span><i class="fas fa-arrow-right"></i>
+      </a>
+      
     </div>
+    
   </div>
 
   <!-- Prepare, Seek, Manage -->
@@ -327,79 +327,153 @@
     <div class="column prepare">
       <h2>PREPARE <i class="fas fa-tools"></i></h2>
       <hr>
+      
       <div class="link-item">
-        <a href="#" class="link-toggle">HOW TO: Job Interviews <span class="icon"><!-- Example: right arrow SVG --><svg width="16" height="16" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
-        <path d="M9 18L15 12L9 6" stroke="#005a9c" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
-          </svg>
-        </span><i class="fas fa-arrow-right"></i></a>
-        <div class="link-description">Join a workshop to polish your job interview skills</div>
+        <a href="#" class="link-toggle">HOW TO: Job Interviews <span class="icon"><svg width="16" height="16" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+        <path d="M9 18L15 12L9 6" stroke="#005a9c" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg></span><i class="fas fa-arrow-right"></i></a>
+        <div class="link-description">Find the resources here to learn more about how you can succeed in job interviews.<br><br>
+        👉 <button href="https://www.churchofjesuschrist.org/life/job-interviews?lang=eng" target="_blank">HERE</button></div>
       </div>
+      
       <div class="link-item">
-        <a href="#" class="link-toggle">HOW TO: Create a Resume <span class="icon"><!-- Example: right arrow SVG --><svg width="16" height="16" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
-        <path d="M9 18L15 12L9 6" stroke="#005a9c" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
-    </svg>
-  </span><i class="fas fa-arrow-right"></i></a>
-        <div class="link-description">Join a workshop to polish your resume skills</div>
+        <a href="#" class="link-toggle">HOW TO: Create a Resume <span class="icon"><svg width="16" height="16" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+        <path d="M9 18L15 12L9 6" stroke="#005a9c" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg></span><i class="fas fa-arrow-right"></i></a>
+        <div class="link-description">Find the resources here to learn more about crafting a powerful resume.<br><br>
+        👉 <button href="https://www.churchofjesuschrist.org/life/tips-for-how-to-create-a-resume?lang=eng" target="_blank">HERE</button></div>
       </div>
+      
       <div class="link-item">
-        <a href="#" class="link-toggle">HOW TO: Networking <span class="icon"><!-- Example: right arrow SVG --><svg width="16" height="16" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
-        <path d="M9 18L15 12L9 6" stroke="#005a9c" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
-    </svg>
-  </span><i class="fas fa-arrow-right"></i></a>
-        <div class="link-description">Join a workshop to polish your resume skills</div>
+        <a href="#" class="link-toggle">HOW TO: Networking <span class="icon"><svg width="16" height="16" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+        <path d="M9 18L15 12L9 6" stroke="#005a9c" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg></span><i class="fas fa-arrow-right"></i></a>
+        <div class="link-description">Find the resources here to learn more about how and where you can network for your career.<br><br>
+        👉 <button href="https://www.churchofjesuschrist.org/life/networking?lang=eng" target="_blank">HERE</button></div>
       </div>
+      
       <div class="link-item">
-        <a href="#" class="link-toggle">Find an Employment Center <span class="icon"><!-- Example: right arrow SVG --><svg width="16" height="16" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
-        <path d="M9 18L15 12L9 6" stroke="#005a9c" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
-    </svg>
-  </span><i class="fas fa-arrow-right"></i></a>
-        <div class="link-description">Join a workshop to polish your resume skills</div>
+        <a href="#" class="link-toggle">Find an Employment Center <span class="icon"><svg width="16" height="16" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+        <path d="M9 18L15 12L9 6" stroke="#005a9c" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg></span><i class="fas fa-arrow-right"></i></a>
+        <div class="link-description">If you’d like personalized, face-to-face job search help, a place to connect with other job seekers, 
+          or a space where you can focus on your job search, then consider visiting one of the Church’s Employment Centers near you.<br><br>
+        👉 <button href="https://www.churchofjesuschrist.org/life/employment-centers?lang=eng" target="_blank">HERE</button></div>
       </div>
+      
       <div class="link-item">
-        <a href="#" class="link-toggle">Preparing for Job Interviews Workshop <span class="icon"><!-- Example: right arrow SVG --><svg width="16" height="16" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
-        <path d="M9 18L15 12L9 6" stroke="#005a9c" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
-    </svg>
-  </span><i class="fas fa-arrow-right"></i></a>
-        <div class="link-description">Join a workshop to polish your resume skills</div>
+        <a href="#" class="link-toggle">Preparing for Job Interviews Workshop <span class="icon"><svg width="16" height="16" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+        <path d="M9 18L15 12L9 6" stroke="#005a9c" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg></span><i class="fas fa-arrow-right"></i></a>
+        <div class="link-description">What are the most common interview questions, and how can you answer them in a way that will give you an edge over the competition? 
+          This workshop teaches you how to create power statements and explores other tips and strategies for how to have a successful job interview.<br><br>
+        👉 <button href="https://employmentservices.churchofjesuschrist.org/events/register/2ed4bb1c-97aa-ee11-be37-002248081f4c" target="_blank">HERE</button></div>
       </div>
+      
       <div class="link-item">
-        <a href="#" class="link-toggle">Resume Workshop <span class="icon"><!-- Example: right arrow SVG --><svg width="16" height="16" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
-        <path d="M9 18L15 12L9 6" stroke="#005a9c" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
-    </svg>
-  </span><i class="fas fa-arrow-right"></i></a>
-        <div class="link-description">Join a workshop to polish your resume.</div>
+        <a href="#" class="link-toggle">Resume Workshop <span class="icon"><svg width="16" height="16" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+        <path d="M9 18L15 12L9 6" stroke="#005a9c" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg></span><i class="fas fa-arrow-right"></i></a>
+        <div class="link-description">The resume workshop explores the latest tips and strategies for creating a powerful resume. 
+          You will learn how to match your skills and experiences with the needs of employers in a way that will help your resume stand out and get noticed.<br><br>
+        👉 <button href="https://employmentservices.churchofjesuschrist.org/events/register/b80ad5b1-96aa-ee11-be37-002248081f4c" target="_blank">HERE</button></div>
       </div>
+      
     </div>
 
     <div class="column seek">
       <h2>SEEK <i class="fas fa-search"></i></h2>
-      <hr>
-      <a href="#" target="_blank">HOW TO: Find Job Leads <i class="fas fa-arrow-right"></i></a>
-      <a href="#" target="_blank">Staying Emotionally Resilient <i class="fas fa-arrow-right"></i></a>
-      <a href="#" target="_blank">Join a Job Search Group <i class="fas fa-arrow-right"></i></a>
-      <a href="#" target="_blank">Finding Job Leads Workshop <i class="fas fa-arrow-right"></i></a>
-      <a href="#" target="_blank">Accelerate Search Workshop <i class="fas fa-arrow-right"></i></a>
-      <a href="#" target="_blank">Church Employment <i class="fas fa-arrow-right"></i></a>
-      <a href="#" target="_blank">Church Network Job Listings <i class="fas fa-arrow-right"></i></a>
-      <a href="#" target="_blank">Other Job Boards <i class="fas fa-arrow-right"></i></a>
+      <hr>    
+      
+      <div class="link-item">
+        <a href="#" class="link-toggle">HOW TO: Find Job Leads <span class="icon"><svg width="16" height="16" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+        <path d="M9 18L15 12L9 6" stroke="#005a9c" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg></span><i class="fas fa-arrow-right"></i></a>
+        <div class="link-description">Find the resources here to learn more about how and where you can find job leads.<br><br>
+        👉 <button href="https://www.churchofjesuschrist.org/life/finding-job-leads?lang=eng" target="_blank">HERE</button></div>
+      </div>
+
+      <div class="link-item">
+        <a href="#" class="link-toggle">Staying Emotionally Resilient <span class="icon"><svg width="16" height="16" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+        <path d="M9 18L15 12L9 6" stroke="#005a9c" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg></span><i class="fas fa-arrow-right"></i></a>
+        <div class="link-description">Unemployment, job searching, and other work-related stresses can significantly impact our personal and family well-being. 
+          Here you can find information and resources that can help strengthen emotional resilience through employment challenges. <br><br>
+        👉 <button href="https://www.churchofjesuschrist.org/life/staying-emotionally-resilient-through-unemployment?lang=eng" target="_blank">HERE</button></div>
+      </div>      
+      
+      <div class="link-item">
+        <a href="#" class="link-toggle">Join a Job Search Group <span class="icon"><svg width="16" height="16" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+        <path d="M9 18L15 12L9 6" stroke="#005a9c" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg></span><i class="fas fa-arrow-right"></i></a>
+        <div class="link-description">Find daily support and encouragement from Employment Services staff and other job seekers by joining an Active Job Search group.<br><br>
+        👉 <button href="https://www.churchofjesuschrist.org/life/accelerated-job-search?lang=eng" target="_blank">HERE</button></div>
+      </div>
+
+      <div class="link-item">
+        <a href="#" class="link-toggle">Finding Job Leads Workshop <span class="icon"><svg width="16" height="16" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+        <path d="M9 18L15 12L9 6" stroke="#005a9c" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg></span><i class="fas fa-arrow-right"></i></a>
+        <div class="link-description">In this workshop, you will learn the best places to go to find job leads, including how to tap into the hidden job market where most jobs are filled before they are ever advertised.<br><br>
+        👉 <button href="https://employmentservices.churchofjesuschrist.org/events/register/44a8c4ef-96aa-ee11-be37-002248081f4c" target="_blank">HERE</button></div>
+      </div>
+
+      <div class="link-item">
+        <a href="#" class="link-toggle">Accelerate Search Workshop <span class="icon"><svg width="16" height="16" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+        <path d="M9 18L15 12L9 6" stroke="#005a9c" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg></span><i class="fas fa-arrow-right"></i></a>
+        <div class="link-description">This workshop teaches strategies that will help you take control of and speed up your job search. You will also learn about additional resources that will help you succeed in finding employment.<br><br>
+        👉 <button href="https://employmentservices.churchofjesuschrist.org/events/register/a591b460-96aa-ee11-be37-002248081f4c" target="_blank">HERE</button></div>
+      </div>
+      
+      <div class="link-item">
+        <a href="#" class="link-toggle">Church Employment <span class="icon"><svg width="16" height="16" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+        <path d="M9 18L15 12L9 6" stroke="#005a9c" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg></span><i class="fas fa-arrow-right"></i></a>
+        <div class="link-description">Find job openings within the Church.<br><br>
+        👉 <button href="https://www.churchofjesuschrist.org/church/employment?lang=eng" target="_blank">HERE</button></div>
+      </div>
+
+      <div class="link-item">
+        <a href="#" class="link-toggle">Church Network Job Listings <span class="icon"><svg width="16" height="16" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+        <path d="M9 18L15 12L9 6" stroke="#005a9c" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg></span><i class="fas fa-arrow-right"></i></a>
+        <div class="link-description">Find jobs posted from employers and organizations that have specifically chosen to share their job openings with the Church.<br><br>
+        👉 <button href="https://employmentservices.churchofjesuschrist.org/search" target="_blank">HERE</button></div>
+      </div>
+
+      <div class="link-item">
+        <a href="#" class="link-toggle">Other Job Boards <span class="icon"><svg width="16" height="16" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+        <path d="M9 18L15 12L9 6" stroke="#005a9c" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg></span><i class="fas fa-arrow-right"></i></a>
+        <div class="link-description">Learn more about where employers post job advertisements and openings.<br><br>
+        👉 <button href="https://www.churchofjesuschrist.org/life/best-online-job-boards-to-use-in-your-job-search?lang=eng" target="_blank">HERE</button></div>
+      </div>
     </div>
 
     <div class="column manage">
       <h2>CAREER <i class="fas fa-briefcase"></i></h2>
       <hr>
-      <a href="#" data-tooltip="Join a workshop to polish your resume" target="_blank">Webinar: Techniques for Changing Careers <i class="fas fa-arrow-right"></i></a>
-      <a href="#" data-tooltip="Join a workshop to polish your resume" target="_blank">Webinar: How Technology is Disrupting the Job Market <i class="fas fa-arrow-right"></i></a>
-      <a href="#" data-tooltip="Join a workshop to polish your resume" target="_blank">Webinar: How to Get Your Next Promotion <i class="fas fa-arrow-right"></i></a>
+      
+      <div class="link-item">
+        <a href="#" class="link-toggle">Webinar: Techniques for Changing Careers <span class="icon"><svg width="16" height="16" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+        <path d="M9 18L15 12L9 6" stroke="#005a9c" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg></span><i class="fas fa-arrow-right"></i></a>
+        <div class="link-description">Watch a video on how to manage the often difficult terrain of changing careers.<br><br>
+        👉 <button href="https://players.brightcove.net/1241706627001/default_default/index.html?videoId=6291324012001" target="_blank">HERE</button></div>
+      </div>
+
+      <div class="link-item">
+        <a href="#" class="link-toggle">Webinar: How Technology is Disrupting the Job Market <span class="icon"><svg width="16" height="16" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+        <path d="M9 18L15 12L9 6" stroke="#005a9c" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg></span><i class="fas fa-arrow-right"></i></a>
+        <div class="link-description">Watch a video on how to 'future-proof' your career's trajectory.<br><br>
+        👉 <button href="https://players.brightcove.net/1241706627001/default_default/index.html?videoId=6300242921001" target="_blank">HERE</button></div>
+      </div>
+
+      <div class="link-item">
+        <a href="#" class="link-toggle">Webinar: How to Get Your Next Promotion <span class="icon"><svg width="16" height="16" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+        <path d="M9 18L15 12L9 6" stroke="#005a9c" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg></span><i class="fas fa-arrow-right"></i></a>
+        <div class="link-description">Watch a video on how to "LEVEL UP!" in your career.<br><br>
+        👉 <button href="https://players.brightcove.net/1241706627001/default_default/index.html?videoId=6307528997112" target="_blank">HERE</button></div>
+      </div>
+      
     </div>
+    
   </div>
 
   <footer>OREM YSA 10TH WARD</footer>
+  
   <div id="chat-box">
     <img src="gma.jpg" alt="You" class="chat-image" />
     <p>
       <strong>Need to chat?<hr></strong>
-      Schedule a conversation with the Ward's Employment Specialist<br><br>
-      👉 <button href="YOUR_GOOGLE_CALENDAR_URL" target="_blank">HERE</button>
+      Schedule a conversation with the YSA 10th Ward's Employment Specialist<br><br>
+      👉 <button href="https://calendar.app.google/JNxJUsdf4tLizwNp7" target="_blank">HERE</button>
     </p>
   </div>
   
@@ -408,6 +482,7 @@
     <path d="M21 15a2 2 0 01-2 2H7l-4 4V5a2 2 0 012-2h14a2 2 0 012 2v10z"/>
   </svg>
 </div>
+  
   <script>
 
    document.addEventListener('DOMContentLoaded', function () {
@@ -471,6 +546,5 @@
     });
 
 </script>
-
 </body>
 </html>
