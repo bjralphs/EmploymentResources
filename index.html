@@ -21,29 +21,41 @@
       color: #002b45;
     }
 
-      .link-item {
-        position: relative;
-        margin-bottom: 1rem;
-      }
-      
-      .link-description {
-        max-height: 0;
-        overflow: hidden;
-        opacity: 0;
-        transition: max-height 0.4s ease, opacity 0.4s ease;
-        font-size: 0.85rem;
-        padding-left: 1.2rem; /* align with link text */
-        color: #003355;
-        background-color: #f0f8ff;
-        border-left: 3px solid #005a9c;
-        padding: 0.5rem 1rem;
-        border-radius: 4px;
-      }
-      
-      .link-item:hover .link-description {
-        max-height: 100px; /* big enough to show a few lines */
-        opacity: 1;
-      }
+   .link-item {
+      margin-bottom: 1rem;
+    }
+    
+    .link-toggle {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      text-decoration: none;
+      background-color: #e6f0fa;
+      color: #005a9c;
+      padding: 0.5rem 1rem;
+      border-radius: 5px;
+      transition: background-color 0.3s;
+      cursor: pointer;
+    }
+    
+    .link-toggle:hover {
+      background-color: #d0e7fb;
+    }
+    
+    .link-description {
+      max-height: 0;
+      overflow: hidden;
+      opacity: 0;
+      transition: max-height 0.4s ease, opacity 0.4s ease;
+      padding-left: 1.2rem;
+      font-size: 0.85rem;
+      color: #003355;
+      background-color: #f0f8ff;
+      border-left: 3px solid #005a9c;
+      border-radius: 4px;
+      margin-top: 0.5rem;
+      padding: 0 1rem;
+    }
 
     header {
       font-family: 'Cormorant Garamond', serif;
@@ -247,11 +259,30 @@
 
   <footer>OREM YSA 10TH WARD</footer>
   <script>
-    document.querySelectorAll('.slide a, .column a').forEach(link => {
-      const customTip = link.getAttribute('data-tooltip');
-      const fallback = link.textContent.trim();
-      link.setAttribute('title', customTip || `Go to: ${fallback}`);
+    const toggles = document.querySelectorAll('.link-toggle');
+  
+    toggles.forEach(toggle => {
+      toggle.addEventListener('click', function (e) {
+        e.preventDefault(); // prevent link from navigating
+  
+        // Close all descriptions
+        document.querySelectorAll('.link-description').forEach(desc => {
+          desc.style.maxHeight = null;
+          desc.style.opacity = 0;
+        });
+  
+        // Toggle current description
+        const desc = this.nextElementSibling;
+        if (desc.style.maxHeight) {
+          desc.style.maxHeight = null;
+          desc.style.opacity = 0;
+        } else {
+          desc.style.maxHeight = desc.scrollHeight + "px";
+          desc.style.opacity = 1;
+        }
+      });
     });
   </script>
+
 </body>
 </html>
