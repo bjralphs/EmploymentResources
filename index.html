@@ -404,29 +404,35 @@
 </div>
   <script>
 
-  let chatOpenedManually = false;
+   document.addEventListener('DOMContentLoaded', function () {
+    const chatLauncher = document.getElementById('chat-launcher');
+    const chatBox = document.getElementById('chat-box');
+    const chatClose = document.getElementById('chat-close');
 
-  chatLauncher.addEventListener('click', () => {
-    chatBox.classList.toggle('open');
-    chatOpenedManually = true;
-  });
+    let chatOpenedManually = false;
 
-  chatClose.addEventListener('click', () => {
-    chatBox.classList.remove('open');
-  });
+    chatLauncher.addEventListener('click', () => {
+      chatBox.classList.toggle('open');
+      chatOpenedManually = true;
+    });
 
-  document.addEventListener('click', function (event) {
-    if (!chatBox.contains(event.target) && !chatLauncher.contains(event.target)) {
+    chatClose.addEventListener('click', () => {
       chatBox.classList.remove('open');
-    }
-  });
+    });
 
-  // Auto open chat after 2 minutes (120000ms)
-  setTimeout(() => {
-    if (!chatOpenedManually) {
-      chatBox.classList.add('open');
-    }
-  }, 120000);
+    document.addEventListener('click', function (event) {
+      if (!chatBox.contains(event.target) && !chatLauncher.contains(event.target)) {
+        chatBox.classList.remove('open');
+      }
+    });
+
+    // Auto open chat after 2 minutes (120000ms)
+    setTimeout(() => {
+      if (!chatOpenedManually) {
+        chatBox.classList.add('open');
+      }
+    }, 120000);
+  });
 
   </script>
   <script>
