@@ -23,15 +23,37 @@
 
     header {
       font-family: 'Cormorant Garamond', serif;
-      color: black;
-      padding: 3rem 1rem;
+      color: #002b45;
+      padding: 2rem 1rem 1rem;
       text-align: center;
     }
-
-    header h1 {
-      font-size: 2rem;
+    
+    header h5 {
+      font-size: 0.9rem;
+      font-weight: normal;
       margin: 0;
+      letter-spacing: 0.5px;
     }
+    
+    header h1 {
+      font-size: 2.5rem;
+      font-weight: 600;
+      letter-spacing: 0.2em;
+      text-transform: uppercase;
+      margin: 0.5rem 0 0.5rem;
+      position: relative;
+      display: inline-block;
+    }
+    
+    header h1::after {
+      content: "";
+      display: block;
+      height: 2px;
+      background-color: #002b45;
+      width: 80%;
+      margin: 0.5rem auto 0;
+    }
+
 
     .slide {
       margin: 0 auto;
@@ -112,7 +134,7 @@
       text-align: center;
       padding: 2rem;
       font-weight: bold;
-      margin-top: 10%;
+      margin-top: 1rem;
     }
 
     .prepare {
@@ -130,10 +152,10 @@
 </head>
 <body>
   <header>
-    <h5>"We were not placed on this earth to walk alone."—President Thomas S. Monson</h5><br><br>
-    <h1>Church Employment Resources</h1>
-    <hr>
+  <h5>We were not placed on this earth to walk alone. —President Thomas S. Monson</h5>
+  <h1>Church Employment Resources</h1>
   </header>
+
 
   <!-- General - centered full row -->
   <div class="slide" style="width: 75%;">
