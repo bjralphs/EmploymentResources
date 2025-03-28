@@ -1,10 +1,16 @@
 <!DOCTYPE html>
 <html lang="en">
-<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@400;600;700&display=swap" rel="stylesheet">
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
   <title>Church Employment Resources</title>
+
+  <!-- Google Font -->
+  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@400;600;700&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Quicksand:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+  <!-- Font Awesome -->
+  <script src="https://kit.fontawesome.com/a076d05399.js" crossorigin="anonymous"></script>
+
   <style>
     body {
       font-family: 'Quicksand', sans-serif;
@@ -13,34 +19,39 @@
       background-color: #ffffff;
       color: #002b45;
     }
-    header {      
+
+    header {
       font-family: 'Cormorant Garamond', serif;
       color: black;
       padding: 3rem 1rem;
       text-align: center;
     }
+
     header h1 {
       font-size: 2rem;
       margin: 0;
     }
+
     .slide {
-       flex: 1;
-        min-width: 250px;
-        margin: 1rem;
-        padding: 1.5rem;
-        box-sizing: border-box;
-        background-color: #e6f0fa; /* Light blue background */
-        border-radius: 15px;
-        box-shadow: 0 2px 6px rgba(0, 0, 0, 0.1); /* Optional subtle shadow */
+      margin: 0 auto;
+      padding: 1.5rem;
+      background-color: #e6f0fa;
+      border-radius: 15px;
+      box-shadow: 0 2px 6px rgba(0, 0, 0, 0.1);
       text-align: left;
+      max-width: 800px;
     }
+
     .slide h2 {
       color: #005a9c;
       font-size: 1.5rem;
       margin-bottom: 1rem;
     }
-    .slide a {
-      display: inline-block;
+
+    .slide a, .column a {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
       margin: 0.5rem 0;
       padding: 0.5rem 1rem;
       background-color: #e6f0fa;
@@ -49,22 +60,11 @@
       border-radius: 5px;
       transition: background-color 0.3s;
     }
-    .column a {
-      display: inline-block;
-      margin: 0.5rem 0;
-      padding: 0.5rem 1rem;
-      background-color: #e6f0fa;
-      color: #005a9c;
-      text-decoration: none;
-      border-radius: 5px;
-      transition: background-color 0.3s;
-    }
-    .slide a:hover {
+
+    .slide a:hover, .column a:hover {
       background-color: #d0e7fb;
     }
-    .column a:hover {
-      background-color: #d0e7fb;
-    }
+
     .three-column {
       display: flex;
       flex-wrap: wrap;
@@ -80,80 +80,92 @@
       margin: 1rem;
       padding: 1.5rem;
       box-sizing: border-box;
-      background-color: #e6f0fa; /* Light blue background */
+      background-color: #e6f0fa;
       border-radius: 15px;
-      box-shadow: 0 2px 6px rgba(0, 0, 0, 0.1); /* Optional subtle shadow */
+      box-shadow: 0 2px 6px rgba(0, 0, 0, 0.1);
     }
-    blockquote {
-      font-style: italic;
-      color: #003355;
-      border-left: 4px solid #005a9c;
-      padding-left: 1rem;
-      margin: 1.5rem 0;
+
+    .column h2 {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      color: #005a9c;
+      font-size: 1.5rem;
+      margin-bottom: 1rem;
     }
+
+    .column h2 i {
+      margin-left: 0.5rem;
+    }
+
     footer {
       text-align: center;
       padding: 2rem;
       font-weight: bold;
       margin-top: 10%;
     }
+
     .prepare {
-      background-color: #fce8e6; /* light red/pink */
+      background-color: #fce8e6;
     }
-    
+
     .seek {
-      background-color: #e6f9ec; /* light green */
+      background-color: #e6f9ec;
     }
-    
+
     .manage {
-      background-color: #fff3cd; /* light yellow */
+      background-color: #fff3cd;
     }
   </style>
 </head>
 <body>
   <header>
-    <h5>"We were not placed on this earth to walk alone."—President Thomas S. Monson</h5><br><br>Church Employment Resources<hr></h1>
+    <h5>"We were not placed on this earth to walk alone."—President Thomas S. Monson</h5><br><br>
+    <h1>Church Employment Resources</h1>
+    <hr>
   </header>
 
-  <!-- General - full row -->
+  <!-- General - centered full row -->
   <div class="slide">
     <h2>General</h2>
     <hr>
-    <a href="#" target="_blank">Church Employment</a>
-    <a href="#" target="_blank">Church Network Job Listings</a>
-    <a href="#" target="_blank">Webinar: How to Get Your Next Promotion</a>
-    <a href="https://www.churchofjesuschrist.org/life/networking?lang=eng" target="_blank">Church Networking Resource</a>
+    <a href="#" target="_blank">Church Employment <i class="fas fa-arrow-right"></i></a>
+    <a href="#" target="_blank">Church Network Job Listings <i class="fas fa-arrow-right"></i></a>
+    <a href="#" target="_blank">Webinar: How to Get Your Next Promotion <i class="fas fa-arrow-right"></i></a>
+    <a href="https://www.churchofjesuschrist.org/life/networking?lang=eng" target="_blank">Church Networking Resource <i class="fas fa-arrow-right"></i></a>
   </div>
 
-  <!-- Prepare, Seek, Manage - shared row -->
+  <!-- Prepare, Seek, Manage -->
   <div class="three-column" style="width: 75%;">
-    <div class="column">
-      <h2>Prepare</h2>
+    <div class="column prepare">
+      <h2>Prepare <i class="fas fa-tools"></i></h2>
       <hr>
-      <a href="#" target="_blank">Staying Emotionally Resilient</a>
-      <a href="#" target="_blank">Join a Job Search Group</a>
-      <a href="#" target="_blank">HOW TO: Find Job Leads</a>
-      <a href="#" target="_blank">Finding Job Leads Workshop</a>
-      <a href="#" target="_blank">Accelerate Search Workshop</a>
+      <a href="#" target="_blank">Staying Emotionally Resilient <i class="fas fa-arrow-right"></i></a>
+      <a href="#" target="_blank">Join a Job Search Group <i class="fas fa-arrow-right"></i></a>
+      <a href="#" target="_blank">HOW TO: Find Job Leads <i class="fas fa-arrow-right"></i></a>
+      <a href="#" target="_blank">Finding Job Leads Workshop <i class="fas fa-arrow-right"></i></a>
+      <a href="#" target="_blank">Accelerate Search Workshop <i class="fas fa-arrow-right"></i></a>
     </div>
-    <div class="column">
-      <h2>Seek</h2>
+
+    <div class="column seek">
+      <h2>Seek <i class="fas fa-search"></i></h2>
       <hr>
-      <a href="#" target="_blank">Sign Up for One-on-One Job Coaching</a>
-      <a href="#" target="_blank">Ask an Expert Employment Webinar Series</a>
-      <a href="#" target="_blank">Webinar: Techniques for Changing Careers</a>
-      <a href="#" target="_blank">Webinar: How Technology is Disrupting the Job Market</a>
+      <a href="#" target="_blank">Sign Up for One-on-One Job Coaching <i class="fas fa-arrow-right"></i></a>
+      <a href="#" target="_blank">Ask an Expert Employment Webinar Series <i class="fas fa-arrow-right"></i></a>
+      <a href="#" target="_blank">Webinar: Techniques for Changing Careers <i class="fas fa-arrow-right"></i></a>
+      <a href="#" target="_blank">Webinar: How Technology is Disrupting the Job Market <i class="fas fa-arrow-right"></i></a>
     </div>
-    <div class="column">
-      <h2>Manage</h2>
+
+    <div class="column manage">
+      <h2>Manage <i class="fas fa-briefcase"></i></h2>
       <hr>
-      <a href="#" target="_blank">HOW TO: Job Interviews</a>
-      <a href="#" target="_blank">Resume Workshop</a>
-      <a href="#" target="_blank">Prepare for Interviews Workshop</a>
-      <a href="#" target="_blank">Find an Employment Center</a>
-      <a href="#" target="_blank">HOW TO: Create a Resume</a>
-      <a href="#" target="_blank">HOW TO: Networking</a>
-      <a href="#" target="_blank">Other Job Boards</a>
+      <a href="#" target="_blank">HOW TO: Job Interviews <i class="fas fa-arrow-right"></i></a>
+      <a href="#" target="_blank">Resume Workshop <i class="fas fa-arrow-right"></i></a>
+      <a href="#" target="_blank">Prepare for Interviews Workshop <i class="fas fa-arrow-right"></i></a>
+      <a href="#" target="_blank">Find an Employment Center <i class="fas fa-arrow-right"></i></a>
+      <a href="#" target="_blank">HOW TO: Create a Resume <i class="fas fa-arrow-right"></i></a>
+      <a href="#" target="_blank">HOW TO: Networking <i class="fas fa-arrow-right"></i></a>
+      <a href="#" target="_blank">Other Job Boards <i class="fas fa-arrow-right"></i></a>
     </div>
   </div>
 
