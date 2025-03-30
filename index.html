@@ -292,6 +292,34 @@
       }
     }
 
+    button {
+        background-color: #005a9c;      /* Church blue */
+        color: white;                   /* Good contrast */
+        border: none;
+        padding: 0.5rem 1rem;           /* Comfortable spacing */
+        border-radius: 4px;             /* Slight rounding */
+        font-size: 1rem;
+        font-weight: 600;
+        cursor: pointer;
+        transition: background-color 0.2s ease, transform 0.1s ease;
+        text-transform: uppercase;      /* Optional, for "HERE" */
+        text-decoration: none;
+    }
+    
+    button:hover {
+        background-color: #00457c;      /* Slightly darker on hover */
+        transform: scale(1.02);         /* Subtle lift effect */
+    }
+    
+    button:active {
+        transform: scale(0.98);         /* Click feedback */
+    }
+    
+    button:focus {
+        outline: 2px solid #aad4ff;     /* Visible keyboard focus */
+        outline-offset: 2px;
+    }
+
 
   </style>
 </head> 
