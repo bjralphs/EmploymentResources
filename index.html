@@ -17,7 +17,7 @@
       font-family: 'Quicksand', sans-serif;
       margin: 0;
       padding: 0;
-      background-color: #ffffff;
+      background-color: #f8f8f8; /* <-- off-white background */
       color: #002b45;
     }
     .general-links .icon {
@@ -230,6 +230,12 @@
     .column h2 i {
       margin-left: 0.5rem;
     }
+    .page-inner {
+      max-width: 1200px;
+      margin: 0 auto;
+      background-color: #ffffff; /* white center panel */
+      padding: 0 1rem; /* add side padding */
+    }
 
     footer {
       text-align: center;
@@ -361,6 +367,7 @@
   </style>
 </head> 
 <body>
+  <div class="page-inner">
   <header>
   <div class="header-inner">
     <h5>We were not placed on this earth to walk alone. —President Thomas S. Monson</h5>
@@ -549,6 +556,7 @@
   </div>
 
   <footer>OREM YSA 10TH WARD <hr><br><br><a href="Employment Resources.pdf" download class="download-btn">Download PDF</a></footer>
+
   
   <div id="chat-box">
     <img src="gma.jpg" alt="You" class="chat-image" />
@@ -564,7 +572,7 @@
     <path d="M21 15a2 2 0 01-2 2H7l-4 4V5a2 2 0 012-2h14a2 2 0 012 2v10z"/>
   </svg>
 </div>
-  
+</div>
   <script>
 
    document.addEventListener('DOMContentLoaded', function () {
@@ -628,5 +636,6 @@
     });
 
 </script>
+
 </body>
 </html>
