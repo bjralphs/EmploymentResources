@@ -125,9 +125,10 @@
       padding: 2rem 1rem 1rem;
       overflow: hidden;
       text-align: center;
-      transition: all 1s ease;
+      transition: all 2s ease;
       height: auto; /* fallback if JS doesn't run */
     }
+    
     header.expanded {
       height: 100vh;        /* full screen */
       padding-top: 20vh;    /* center the text vertically */
@@ -135,8 +136,6 @@
       flex-direction: column;
       justify-content: center;
     }
-
-
 
     .header-inner {
       max-width: 1200px;
@@ -654,17 +653,10 @@
 
 </script>
 <script>
-  document.addEventListener('DOMContentLoaded', function () {
-    const header = document.querySelector('header');
-
-    // Start with expanded class
-    header.classList.add('expanded');
-
-    // Shrink after a delay (e.g., 2 seconds)
-    setTimeout(() => {
-      header.classList.remove('expanded');
-    }, 2000); // 2000 ms = 2 seconds
-  });
+  window.addEventListener('scroll', () => {
+  const header = document.querySelector('header');
+  header.classList.remove('expanded');
+});
 </script>
 
 
