@@ -128,7 +128,7 @@
       transition: all 2s ease;
       height: auto; /* fallback if JS doesn't run */
     }
-    
+
     header.expanded {
       height: 100vh;        /* full screen */
       padding-top: 20vh;    /* center the text vertically */
@@ -384,7 +384,7 @@
 </head> 
 <body>
   <div class="page-inner">
-  <header>
+  <header class="expanded">
   <div class="header-inner">
     <h5>We were not placed on this earth to walk alone. —President Thomas S. Monson</h5>
     <h1>Church Employment Resources</h1>
@@ -653,11 +653,18 @@
 
 </script>
 <script>
-  window.addEventListener('scroll', () => {
-  const header = document.querySelector('header');
-  header.classList.remove('expanded');
-});
+  document.addEventListener('DOMContentLoaded', function () {
+    const header = document.querySelector('header');
+
+    // Shrink the header on scroll
+    window.addEventListener('scroll', function () {
+      if (window.scrollY > 10 && header.classList.contains('expanded')) {
+        header.classList.remove('expanded');
+      }
+    });
+  });
 </script>
+
 
 
 </body>
