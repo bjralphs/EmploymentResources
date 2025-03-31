@@ -123,8 +123,28 @@
       font-family: 'Cormorant Garamond', serif;
       color: #002b45;
       padding: 2rem 1rem 1rem;
+      overflow: hidden;
       text-align: center;
+      transition: all 1s ease;
+      height: auto; /* fallback if JS doesn't run */
     }
+    header.expanded {
+      height: 100vh;        /* full screen */
+      padding-top: 20vh;    /* center the text vertically */
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+    }
+
+    header.expanded h1 {
+      font-size: 3.5rem;
+      transition: font-size 1s ease;
+    }
+
+    header h1 {
+      transition: font-size 1s ease;
+    }
+
     .header-inner {
       max-width: 1200px;
       margin: 0 auto;
@@ -640,6 +660,20 @@
     });
 
 </script>
+<script>
+  document.addEventListener('DOMContentLoaded', function () {
+    const header = document.querySelector('header');
+
+    // Start with expanded class
+    header.classList.add('expanded');
+
+    // Shrink after a delay (e.g., 2 seconds)
+    setTimeout(() => {
+      header.classList.remove('expanded');
+    }, 2000); // 2000 ms = 2 seconds
+  });
+</script>
+
 
 </body>
 </html>
