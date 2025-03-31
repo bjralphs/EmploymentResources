@@ -125,34 +125,9 @@
       padding: 2rem 1rem 1rem;
       overflow: hidden;
       text-align: center;
-      transition: all 2s ease;
       height: auto; /* fallback if JS doesn't run */
     }
 
-    header.expanded {
-      height: 100vh;        /* full screen */
-      padding-top: 20vh;    /* center the text vertically */
-      display: flex;
-      flex-direction: column;
-      justify-content: center;
-    }
-
-    header h1 {
-      transition: font-size 2s ease;
-    }
-
-    header.expanded h1 {
-      font-size: 3.5rem;
-    }
-
-    header h5 {
-      transition: all 2s ease;
-    }
-
-    header.expanded h5 {
-      font-size: 1.5rem;
-      opacity: 0.8;
-    }
 
     .header-inner {
       max-width: 1200px;
@@ -669,18 +644,7 @@
     });
 
 </script>
-<script>
-  document.addEventListener('DOMContentLoaded', function () {
-    const header = document.querySelector('header');
 
-    // Shrink the header on scroll
-    window.addEventListener('scroll', function () {
-      if (window.scrollY > 10 && header.classList.contains('expanded')) {
-        header.classList.remove('expanded');
-      }
-    });
-  });
-</script>
 
 
 
